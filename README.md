@@ -1,248 +1,481 @@
 # ESG, Carbon Accounting & Sustainability Reporting Portfolio
 
-I use sustainability data to move from **measurement and data validation to disclosure, reporting, and management action**.
+I work with sustainability data to make reporting more reliable, traceable, and useful for decisions.
 
-This portfolio brings together applied projects in greenhouse-gas accounting, ESG data quality, sustainability disclosure, reporting readiness, climate evidence analysis, and AI-assisted reporting workflows.
+My projects focus on the part of ESG work that often gets overlooked: the systems behind the final report.
 
-Across the projects, the common objective is not simply to produce an ESG metric or a report. It is to make the underlying data and evidence **traceable, reviewable, and useful for decision-making**.
+That includes:
 
-## Reporting Workflow
+- collecting and organizing sustainability data;
+- checking data quality and resolving inconsistencies;
+- calculating and reviewing GHG and ESG metrics;
+- connecting reported information to source evidence;
+- building dashboards and reporting workflows;
+- using AI carefully for evidence review and disclosure analysis;
+- connecting ESG information with operational issues, risks, and improvement actions.
 
-**Data Collection → QA/QC → GHG & ESG Metrics → Framework Mapping → Evidence Review → Reporting → Management Action**
+My working approach is:
+
+**Source Data → QA/QC → Reliable Metrics → Evidence → Reporting → Hotspots / Risk → Action**
 
 ---
 
 ## Portfolio at a Glance
 
-| Project | Primary Question | Methods / Tools | Current Status |
-|---|---|---|---|
-| [AI-Powered IFRS S2 Evidence & Gap Analysis](https://github.com/haveisi/AI-Powered-IFRS-S2-Requirement-Mapping-Evidence-Gap-Analysis) | How can AI help analysts find and organize climate-disclosure evidence while preserving human judgment? | Python, LlamaIndex, Pydantic, semantic retrieval, human-in-the-loop review | Applied disclosure-analysis pilot |
-| [Scope 3 & Regenerative Agriculture Analytics](https://github.com/haveisi/04_scope3_regenerative_agriculture) | How can operational and agricultural emissions be translated into hotspots and reduction scenarios? | Python, GHG accounting, Streamlit, scenario analysis | Simplified GHG screening model |
-| [Real Estate ESG & GRESB Readiness](https://github.com/haveisi/real-estate-carbon-benchmarking-gresb-analytics) | How can utility, emissions, benchmark, climate-risk, and evidence data be structured for ESG reporting readiness? | Python, Excel, ESG data QA, GRESB-style evidence review | Applied reporting-readiness case |
-| [Climate Action Plan Analytics](https://github.com/haveisi/climate-action-plan-analytics) | How can unstructured climate plans be converted into structured and auditable analytical data? | AI-assisted extraction, JSON schemas, validation, deterministic scoring | Applied climate-policy analytics case |
+| Project | What I Worked On | Tools / Methods |
+|---|---|---|
+| [**Mercy Corps Climate Reporting & Power BI Rebuild**](https://github.com/mercycorps/Climate-Report) | Multi-country GHG reporting, validation, data flows, Power BI, reporting controls | GHG Protocol, Excel, SharePoint, Power Automate, Microsoft Fabric, Power BI |
+| [**ESG–EHS Decision Intelligence & FP&A**](https://github.com/haveisi/esg-ehs-fpa-decision-intelligence) | Connecting ESG performance with EHS risk, CAPA, improvement projects, and financial decisions | Databricks, SQL, Python, Power BI, DAX, ESG/EHS, FP&A |
+| [**AI-Powered IFRS S2 Evidence & Gap Analysis**](https://github.com/haveisi/AI-Powered-IFRS-S2-Requirement-Mapping-Evidence-Gap-Analysis) | Climate-disclosure evidence review and gap analysis with human oversight | Python, LlamaIndex, Pydantic, semantic retrieval, human-in-the-loop review |
+| [**Scope 3 & Regenerative Agriculture Analytics**](https://github.com/haveisi/04_scope3_regenerative_agriculture) | GHG hotspots, agricultural emissions, and reduction scenarios | Python, GHG accounting, Streamlit, scenario analysis |
+| [**Real Estate ESG & GRESB Readiness**](https://github.com/haveisi/real-estate-carbon-benchmarking-gresb-analytics) | Energy, water, waste, emissions, benchmarking, and ESG evidence readiness | Python, Excel, ESG data QA/QC, GRESB-style review |
 
 ---
 
-# Featured Projects
+# 1. Mercy Corps Climate Reporting & Power BI Rebuild
 
-## 1. AI-Powered IFRS S2 Requirement Mapping & Evidence Gap Analysis
+**GHG accounting | Scope 1–3 | Data quality | Microsoft Fabric | Power BI | SharePoint | Power Automate**
 
-**Climate disclosure | IFRS S2 | Evidence traceability | Python | LlamaIndex | Human-in-the-loop AI**
+[View repository →](https://github.com/mercycorps/Climate-Report)
+
+This is the strongest example in this portfolio of working with a real organizational sustainability-reporting system.
+
+I supported a rebuild of a multi-country carbon-reporting workflow covering:
+
+- more than **40 countries**;
+- **7 reporting years**;
+- more than **15,000 records**;
+- Scope 1, Scope 2, and selected Scope 3 emissions data.
+
+The main challenge was not simply producing an emissions total.
+
+The bigger issue was making sure the information entering the reporting process was complete, consistent, reviewable, and traceable.
+
+## Reporting flow
+
+**Microsoft Forms  
+→ Excel staging  
+→ validation and issue review  
+→ SharePoint / Power Automate  
+→ Microsoft Fabric Lakehouse / Delta  
+→ Power BI**
+
+My work included:
+
+- reviewing country, office, fiscal year, scope, category, and emissions fields;
+- creating validation rules and review flags;
+- identifying missing or inconsistent records;
+- standardizing office and country information;
+- documenting QA/QC logic;
+- checking curated reporting tables;
+- supporting SharePoint-based source and refresh workflows;
+- building Power BI views for executive reporting, operational review, trends, and data validation.
+
+One of the most useful parts of the dashboard was not the executive summary.
+
+It was the **validation layer**, because it made questionable records visible before they were accepted into reporting.
+
+This project reinforced a simple lesson for me:
+
+> A sustainability dashboard is only as reliable as the data controls behind it.
+
+---
+
+# 2. ESG–EHS Decision Intelligence & FP&A
+
+**Timken public reporting case**
+
+**ESG | EHS | Risk | CAPA | Databricks | SQL | Power BI | DAX | FP&A**
+
+[View repository →](https://github.com/haveisi/esg-ehs-fpa-decision-intelligence)
+
+I developed this project to explore what can happen **after ESG reporting**.
+
+A sustainability report can show trends in emissions, energy, water, and waste.
+
+But management still has to answer other questions:
+
+- Where are the operational risks?
+- What needs corrective action?
+- Which improvement projects should be prioritized?
+- Which projects create both environmental and financial value?
+- Which actions may still be necessary even when the NPV is weak?
+
+I used public Timken sustainability reporting as the corporate evidence base and then built a clearly labeled synthetic facility-level layer for EHS, risk, CAPA, and project-finance analysis.
+
+## Analytical flow
+
+**Public ESG evidence  
+→ environmental KPIs  
+→ EHS indicators  
+→ facility hotspot  
+→ risk  
+→ CAPA  
+→ improvement project  
+→ financial analysis  
+→ management priority**
+
+The environmental layer includes:
+
+- Scope 1 and Scope 2 emissions;
+- energy use;
+- renewable-energy share;
+- water;
+- waste;
+- waste diversion.
+
+The EHS demonstration layer includes:
+
+- TRIR;
+- LTIR;
+- Good Catch activity;
+- residual risk;
+- open and overdue CAPA;
+- facility-level hotspots.
+
+The project layer adds:
+
+- CAPEX;
+- annual savings;
+- carbon reduction;
+- risk reduction;
+- payback;
+- NPV;
+- simplified marginal abatement cost.
+
+## Data architecture
+
+I structured the project using a Databricks medallion approach:
+
+**Bronze → Silver → Gold → Power BI**
+
+Bronze stores source evidence and extracted information.
+
+Silver organizes reviewed ESG metrics and modeled EHS / project information.
+
+Gold creates KPI, risk, CAPA, and project-decision tables for Power BI.
+
+## Why I included EHS here
+
+I do not see EHS as the main theme of this portfolio.
+
+I see it as one of the operational systems that can make ESG information more actionable.
+
+For example:
+
+**EHS observation  
+→ risk  
+→ corrective action  
+→ project  
+→ cost / benefit  
+→ management decision**
+
+That connection is useful because sustainability reporting often sits too far away from the operational systems that actually produce change.
+
+## Data transparency
+
+I deliberately separate:
+
+- **Reported** — directly supported by public Timken reporting;
+- **Derived** — calculated from reported data;
+- **Synthetic** — facility, risk, CAPA, and project records created for the prototype;
+- **Analyst-developed** — thresholds, scoring logic, and prioritization rules.
+
+This is an independent portfolio project and does not represent Timken's internal systems, methodology, or facility data.
+
+---
+
+# 3. AI-Powered IFRS S2 Evidence & Gap Analysis
+
+**IFRS S2 | Climate disclosure | Evidence traceability | Python | LlamaIndex | Human review**
 
 [View repository →](https://github.com/haveisi/AI-Powered-IFRS-S2-Requirement-Mapping-Evidence-Gap-Analysis)
 
-I built this project around a practical sustainability-reporting question:
+I built this project because sustainability reports contain a large amount of information, but finding the exact evidence needed for a disclosure requirement can still be slow and inconsistent.
 
-> **Can AI help analysts find and organize the right disclosure evidence while keeping the final assessment with a human reviewer?**
+The question I explored was:
 
-The workflow uses publicly available sustainability and climate disclosures as source material and combines:
+> Can AI help find and organize disclosure evidence without allowing the AI to make the final compliance judgment?
 
-**Document extraction → keyword and semantic retrieval → structured evidence extraction → schema validation → quotation validation → human review → IFRS S2 mapping → gap analysis → management action**
+## Workflow
 
-The pilot focuses on selected IFRS S2 climate-related disclosure areas, including governance, climate resilience, Scope 1 emissions, Scope 2 emissions, and climate-related targets.
+**Source document  
+→ keyword / semantic retrieval  
+→ structured evidence extraction  
+→ schema validation  
+→ quotation validation  
+→ human review  
+→ IFRS S2 mapping  
+→ gap analysis**
 
-A central design principle is that the AI assists with **evidence discovery and organization**, rather than making an autonomous compliance determination.
+The pilot covers selected IFRS S2 topics such as:
 
-The workflow also distinguishes between three different questions:
+- governance;
+- climate resilience;
+- Scope 1 emissions;
+- Scope 2 emissions;
+- climate-related targets.
 
-**Is relevant evidence present?**
+The AI is used to assist with evidence discovery and organization.
 
-**Does the evidence address the disclosure requirement?**
+The final interpretation remains with the reviewer.
 
-**What remains incomplete or requires additional action?**
+I also distinguish between three different questions:
 
-**What this project demonstrates:** AI can make sustainability-reporting review more efficient, but reliable disclosure analysis still requires requirement-level interpretation, source traceability, deterministic controls, and human judgment.
+1. Is relevant evidence present?
+2. Does that evidence actually address the requirement?
+3. What is still incomplete or uncertain?
 
-**Study status:** Applied portfolio pilot. It is not an audit, assurance engagement, legal opinion, or determination of compliance with IFRS Sustainability Disclosure Standards.
+This distinction is important because finding a paragraph that contains the right keywords does not automatically mean a disclosure requirement has been satisfied.
+
+The project is an analytical portfolio pilot, not an audit or formal determination of IFRS compliance.
 
 ---
 
-## 2. Scope 3 & Regenerative Agriculture Analytics
+# 4. Scope 3 & Regenerative Agriculture Analytics
 
-**Agriculture | GHG accounting | Operational + farm emissions | Python | Streamlit | Scenario analysis**
+**Scope 3 | Agriculture | GHG accounting | Python | Streamlit | Scenario analysis**
 
 [View repository →](https://github.com/haveisi/04_scope3_regenerative_agriculture)
 
-This project explores how greenhouse-gas data can move from **emissions measurement to hotspot identification and reduction planning**.
+This project looks at the next question after calculating emissions:
 
-The model evaluates operational and agricultural emissions including:
+> What is actually driving the footprint, and what could change it?
 
-- stationary and mobile fuel use
-- purchased electricity
-- fertilizer-related emissions
-- agricultural inputs and field operations
-- production-based emissions intensity
-- regenerative-agriculture scenarios
+The model evaluates emissions associated with:
 
-The workflow then tests how changes in fertilizer use and agricultural practices affect emissions intensity and cost-emissions tradeoffs.
+- stationary fuel;
+- mobile fuel;
+- purchased electricity;
+- fertilizer use;
+- agricultural inputs;
+- field operations;
+- production intensity.
 
-An interactive Streamlit dashboard provides a management-facing view of emissions sources and scenario outcomes.
+I then use scenario analysis to explore how changes in agricultural practices could affect emissions.
 
-The model explicitly separates modeled soil-carbon effects from operational Scope 1 emissions rather than automatically netting them together.
+The workflow is:
 
-**What this project demonstrates:** GHG accounting becomes more decision-useful when emissions totals are connected to hotspots, operational drivers, and reduction scenarios.
+**GHG data  
+→ emissions hotspot  
+→ operational driver  
+→ reduction scenario  
+→ emissions / cost tradeoff**
 
-**Study status:** Simplified analytical model developed for portfolio and learning purposes. It is not presented as a complete GHG Protocol-compliant corporate inventory.
+An interactive Streamlit dashboard is used to communicate the results.
+
+One methodological point I kept explicit is that modeled soil-carbon effects should not automatically be netted against operational emissions without a defensible accounting basis.
+
+This project helped me practice moving from **carbon accounting to reduction planning**.
 
 ---
 
-## 3. Real Estate ESG & GRESB Readiness Analytics
+# 5. Real Estate ESG & GRESB Readiness
 
-**Real estate | Energy | Water | Waste | Emissions | ESG evidence | Python | Excel**
+**Real estate | Energy | Water | Waste | Carbon | ESG evidence | Python | Excel**
 
 [View repository →](https://github.com/haveisi/real-estate-carbon-benchmarking-gresb-analytics)
 
-I built this project around a fundamental ESG reporting problem:
-
-> **Before sustainability data can support benchmarking or disclosure, how do we know whether the underlying information is complete, structured, and usable?**
+This project focuses on the quality of the underlying information before ESG reporting or benchmarking begins.
 
 The analytical workbook brings together:
 
-- property and asset information
-- monthly energy consumption
-- water consumption
-- waste data
-- emissions factors
-- performance benchmarks
-- climate-risk indicators
-- environmental-justice context
-- retrofit options
-- GRESB-style evidence checklist information
+- property information;
+- energy use;
+- water;
+- waste;
+- GHG emissions;
+- performance benchmarks;
+- climate-risk indicators;
+- environmental-justice context;
+- retrofit opportunities;
+- ESG evidence information.
 
-Python is used to inspect workbook structure, standardize fields, review benchmark data, summarize evidence categories, and generate reporting-ready tables and charts.
+Python is used to review workbook structure, standardize fields, summarize data, and produce reporting-ready outputs.
 
-The emphasis is on the foundation of ESG reporting:
+The basic flow is:
 
-**Data structure → validation → performance metrics → evidence readiness → reporting**
+**Raw asset data  
+→ structure  
+→ validation  
+→ KPI calculation  
+→ benchmarking  
+→ evidence review  
+→ reporting readiness**
 
-**What this project demonstrates:** ESG reporting quality depends as much on the underlying controls, traceability, and data structure as it does on the final report or dashboard.
+This work reinforced another recurring theme across my projects:
 
-**Study status:** Multifamily-focused ESG readiness and building-performance analytics case. It is not presented as a formal GRESB submission.
-
----
-
-## 4. Climate Action Plan Analytics
-
-**Climate disclosure & policy | AI-assisted extraction | Structured data | Validation | Benchmarking**
-
-[View repository →](https://github.com/haveisi/climate-action-plan-analytics)
-
-Climate action plans contain large amounts of qualitative and quantitative information, but that information is often difficult to compare systematically.
-
-This project develops an AI-assisted workflow for converting unstructured climate-plan documents into structured analytical datasets.
-
-The workflow follows:
-
-**Source document → schema-constrained extraction → structured JSON → validation → aggregation → deterministic analysis**
-
-A key methodological rule is:
-
-> **If information is not explicitly present in the source document, it should not be generated as though it were reported evidence.**
-
-This approach separates AI-based document extraction from deterministic analytical scoring and helps reduce unsupported interpretation.
-
-**What this project demonstrates:** AI-assisted ESG and climate analysis becomes more defensible when source extraction, evidence validation, analytical scoring, and interpretation are treated as separate steps.
+> ESG reporting problems are often data-management problems before they become reporting problems.
 
 ---
 
-# How I Think About Sustainability Reporting
+# ESG Disclosure Analytics
 
-I treat sustainability reporting as a **data, evidence, and governance process**, not simply a report-writing exercise.
+Disclosure analysis is another recurring part of my work.
 
-A decision-useful reporting system should be able to answer five questions:
+I treat a sustainability report as a source of evidence that can be structured and reviewed, rather than simply as a finished document.
 
-1. **Where did the information come from?**
-2. **How was it calculated or derived?**
-3. **What controls were applied before the information was accepted?**
-4. **Which disclosure requirement or management question does it address?**
-5. **What remains incomplete, uncertain, or actionable?**
+A typical workflow is:
 
-My working approach is:
+**Report  
+→ topic  
+→ evidence item  
+→ page / source reference  
+→ KPI or narrative classification  
+→ QA/QC  
+→ framework mapping  
+→ gap or inconsistency  
+→ follow-up action**
 
-**Measure → Validate → Map → Review → Report → Act**
+Questions I typically ask include:
 
-This distinction matters because the same sustainability information may serve different purposes.
+- Where did this number or statement come from?
+- Can the source be traced?
+- Is the metric defined consistently?
+- Was the value reported, calculated, modeled, or assumed?
+- Is it comparable with the previous year?
+- Which disclosure requirement does it support?
+- What is still missing?
+- What action should follow?
 
-A calculation suitable for internal screening may not yet be sufficiently documented for external disclosure. A disclosure may contain relevant information without fully satisfying a reporting requirement. And more evidence does not automatically mean better evidence.
+This is where I see AI being useful—but mainly as an assistant for retrieval, classification, and evidence organization.
 
----
-
-# Data & Evidence Governance
-
-Across the portfolio, I try to make the status of information visible rather than treating every input as equally reliable.
-
-Depending on the project, inputs may be identified as:
-
-**Reported** — directly supported by a public or documented source  
-**Calculated** — derived from transparent calculations  
-**Modeled** — generated through scenario or analytical modeling  
-**Assumed** — introduced where information is unavailable  
-**Proxy** — used as a substitute where direct information is unavailable
-
-This distinction helps prevent assumptions from being presented as reported company information and makes analytical limitations easier to evaluate.
+Human review still matters.
 
 ---
 
-# Frameworks & Methodological Context
+# How I Connect ESG Reporting with Operations
 
-The projects draw on sustainability and climate-reporting concepts including:
+One area I am increasingly interested in is connecting ESG reporting with the operational systems behind the metrics.
 
-- GHG accounting and Scope 1–3 concepts
-- IFRS S2 climate-related disclosure requirements
-- sustainability disclosure evidence mapping
-- ESG data-quality and reporting controls
-- GRESB-style real-estate reporting readiness
-- climate-action-plan evaluation
-- scenario analysis
-- source traceability and evidence validation
-- human-in-the-loop AI-assisted analysis
+## Environmental performance
 
-References to reporting frameworks indicate the methodological context used in a project. They should not be interpreted as certification, assurance, or formal compliance unless explicitly stated.
+**Energy / fuel / water / waste  
+→ KPI  
+→ hotspot  
+→ improvement action  
+→ performance tracking**
+
+## EHS
+
+**Observation / incident / risk  
+→ CAPA  
+→ control improvement  
+→ operational performance**
+
+## Finance
+
+**Improvement project  
+→ CAPEX / OPEX  
+→ savings  
+→ NPV / payback  
+→ management decision**
+
+The objective is not to force every ESG issue into a financial metric.
+
+It is to make environmental, operational, and financial tradeoffs visible when a decision is being made.
 
 ---
 
-# Technology & Analytics
+# Data and Evidence Governance
 
-**Data & analytics:** Python, pandas, Excel, SQL  
-**Visualization & reporting:** Power BI, Streamlit  
-**AI-assisted analysis:** LlamaIndex, semantic retrieval, structured extraction, Pydantic validation, human review  
-**Sustainability analytics:** GHG accounting, emissions-intensity analysis, ESG metrics, disclosure mapping, reporting-readiness assessment  
-**Data controls:** QA/QC, schema validation, reconciliation, evidence traceability
+Across my projects, I try to label information according to what it actually is.
+
+| Status | Meaning |
+|---|---|
+| **Reported** | Directly supported by an organizational or public source |
+| **Calculated** | Derived through a transparent calculation |
+| **Modeled** | Generated through analytical or scenario modeling |
+| **Assumed** | Introduced where direct information is unavailable |
+| **Proxy** | Substitute used when better data are unavailable |
+| **Synthetic** | Demonstration data created specifically for a portfolio model |
+
+This matters because a technically correct calculation does not turn an assumed input into a reported company value.
 
 ---
 
-# From Reporting to Decision Support
+# Core Skills Practiced Across the Portfolio
 
-My interest is not limited to producing sustainability metrics.
+| ESG & Reporting | Data & BI | Analytics & Controls |
+|---|---|---|
+| GHG Protocol; Scope 1–3 | Excel; Power Query | Data QA/QC |
+| ESG data collection; KPI reporting | Power BI; DAX | Evidence traceability |
+| Disclosure evidence review | SQL; Python | Data lineage |
+| CDP; GRI; TCFD; IFRS S1/S2 | Databricks; Microsoft Fabric | Process mapping |
+| EHS / CAPA / risk concepts | SharePoint; Power Automate | Scenario analysis; human-in-the-loop AI |
 
-The broader analytical progression I work toward is:
+---
 
-**ESG Data  
-→ Reliable Metrics  
-→ Disclosure  
-→ Hotspot Identification  
-→ Reduction Opportunity  
-→ Scenario Analysis  
-→ Management Decision**
+# Tools
 
-This ESG and reporting portfolio therefore connects with my related work in:
+**Data and analytics**  
+Python | pandas | SQL | Excel | Power Query
 
-### Life Cycle Assessment & Product Sustainability
+**Business intelligence**  
+Power BI | DAX | Streamlit
 
-Product LCA, EPD methodology, packaging, carbon intensity, materials, agriculture, and aquaculture.
+**Data platforms**  
+Databricks | Microsoft Fabric | Delta / Lakehouse | SharePoint
 
-[View Life Cycle Assessment Portfolio →](https://github.com/haveisi/life-cycle-assessment-portfolio)
+**Workflow**  
+Microsoft Forms | Power Automate
 
-### Climate, Decarbonization & Sustainability Finance
+**AI-assisted analysis**  
+LlamaIndex | semantic retrieval | structured extraction | Pydantic validation | human review
 
-Climate risk, emissions-reduction scenarios, capital planning, NPV, IRR, marginal abatement cost, transition risk, and financially informed decarbonization.
+**Sustainability methods**  
+GHG accounting | ESG metrics | disclosure mapping | reporting readiness | scenario analysis
 
-*Portfolio under development.*
+**Controls**  
+QA/QC | reconciliation | exception review | evidence traceability
+
+---
+
+# Where This Portfolio Fits with My Other Work
+
+I keep this repository focused on:
+
+**ESG reporting + carbon accounting + sustainability data systems + evidence + reporting analytics**
+
+My related work is organized separately.
+
+## Life Cycle Assessment & Product Sustainability
+
+Product LCA, EPD methodology, packaging, product carbon, renewable fuels, construction materials, agriculture, and aquaculture.
+
+[View LCA Portfolio →](https://github.com/haveisi/life-cycle-assessment-portfolio)
+
+---
+
+## Climate, Decarbonization & Sustainability Finance
+
+Climate risk, climate action planning, decarbonization scenarios, capital planning, NPV, IRR, marginal abatement cost, transition risk, and financially informed sustainability decisions.
+
+[View Climate, Decarbonization & Finance Portfolio →](https://github.com/haveisi/climate-decarbonization-finance-portfolio)
+
+That portfolio follows a different decision chain:
+
+**Climate / operational exposure  
+→ emissions or risk hotspot  
+→ response option  
+→ environmental benefit  
+→ financial analysis  
+→ scenario testing  
+→ capital decision**
 
 ---
 
 # About
 
-My work sits at the intersection of **sustainability reporting, carbon accounting, environmental analytics, and decision support**.
+My work sits at the intersection of **sustainability reporting, carbon accounting, environmental data, business intelligence, and decision support**.
 
-Across these projects, the recurring objective is to make sustainability information more **traceable, defensible, and useful**—from the underlying data and evidence through reporting and ultimately into management decisions.
+I am most interested in the space between reporting and action:
+
+**How was the information produced?  
+Can we trust it?  
+What does it tell us?  
+Where is the problem?  
+What should change?  
+How do we know whether the change worked?**
+
+That is the thread connecting the projects in this portfolio.
